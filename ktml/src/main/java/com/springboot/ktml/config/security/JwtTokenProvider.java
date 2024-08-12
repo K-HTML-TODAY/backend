@@ -27,10 +27,7 @@ public class JwtTokenProvider {
     private final CustomUserDetailsService userDetailsService;
 
 
-    //@Autowired
-    //public JwtTokenProvider(UserDetailsService userDetailsService) {
-   //     this.userDetailsService = userDetailsService;
-   // }
+
 
     @Value("${springboot.jwt.secret}")
     private String secretKey = "secretKey";

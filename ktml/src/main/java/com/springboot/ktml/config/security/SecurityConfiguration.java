@@ -37,8 +37,8 @@ public class SecurityConfiguration {
 
                 .and()
                 .authorizeRequests() // 리퀘스트에 대한 사용권한 체크
-                .antMatchers("/sign-api/sign-in", "/sign-api/sign-up",
-                        "/sign-api/exception", "/api/files/**").permitAll() // 가입 및 로그인 주소는 허용
+                .antMatchers("/api/v1/sign/sign-in", "/api/v1/sign/sign-up",
+                        "/api/v1/sign/exception", "/api/files/**").permitAll() // 가입 및 로그인 주소는 허용
                 .antMatchers(HttpMethod.GET, "/api/v1/**").permitAll()
 
                 .antMatchers("**exception**").permitAll()
@@ -69,6 +69,6 @@ public class SecurityConfiguration {
                 "/swagger-ui.html",
                 "/webjars/**",
                 "/swagger/**",
-                "/sign-api/exception");
+                "/api/v1/sign/exception");
     }
 }
